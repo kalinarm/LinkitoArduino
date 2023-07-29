@@ -27,17 +27,17 @@ void cmdBuiltinLed(const String& arguments) {
 }
 
 void cmdServoX(const String& arguments) {
-  int angle = SerialEvents::stringToInt(arguments);
+  int angle = constrain(SerialEvents::stringToInt(arguments), 10, 110);
   servoX.write(angle);
 }
 
 void cmdServoY(const String& arguments) {
-  int angle = SerialEvents::stringToInt(arguments);
+  int angle = constrain(SerialEvents::stringToInt(arguments), 50, 170);
   servoY.write(angle);
 }
 
 void cmdServoC(const String& arguments) {
-  int angle = SerialEvents::stringToInt(arguments);
+  int angle = constrain(SerialEvents::stringToInt(arguments), 20, 110);
   servoC.write(angle);
 }
 
