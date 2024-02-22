@@ -62,11 +62,13 @@ void loopNFC() {
         Serial.print("nfcEnter ");
         Serial.println(cardid);
         lastCard = cardid;
+        digitalWrite(LED_PIN, HIGH);
       }
     }
-  } else if (lastCard != 0){
+  } else if (lastCard != 0) {
     Serial.print("nfcExit ");
     Serial.println(lastCard);
     lastCard = 0;
-  }
+    digitalWrite(LED_PIN, LOW);
+   }
 }

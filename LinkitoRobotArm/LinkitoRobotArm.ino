@@ -31,7 +31,7 @@ void setup() {
 
 void initServos() {
   int val = 90;
-  servoR.write(90);
+    servoR.write(90);
   servoX.write(val);
   servoY.write(val);
   servoC.write(val);

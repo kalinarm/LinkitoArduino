@@ -12,7 +12,7 @@
 
 #define DEVICE_ID "NFC"
 #define SERIAL_SPEED 115200
-#define LED_PIN 12
+#define LED_PIN 7
 
 #include "NFC.h"
 #include "SerialEvents.h"

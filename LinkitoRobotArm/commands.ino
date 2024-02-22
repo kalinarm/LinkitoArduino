@@ -28,7 +28,7 @@ void cmdBuiltinLed(const String& arguments) {
 
 void cmdServoX(const String& arguments) {
   int angle = constrain(SerialEvents::stringToInt(arguments), 10, 110);
-  servoX.write(angle);
+  servoX.write(angle);  
 }
 
 void cmdServoY(const String& arguments) {
