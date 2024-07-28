@@ -13,19 +13,23 @@ Just some template to help creating Arduino sketch that connects to the game Lin
 
 ## Config
 
-This communication uses Serial Port at 115200 bauds.
-Need to enable Serial in the game Linkito 
-options/modules/serial then press Add
+This communication uses the serial port at 115200 baud.
+
+Enable the `Serial` module in Linkito by going to `Options` / `Modules`/ `Serial` and press `Add`.
+
+Enter the path to the serial port and click `Activate`.
 
 ## Protocol
 
-The protocol is really simple (even naive)
+The protocol is simple:
 
-[id command] [parameter1] [parameter2] NL
+```text
+<control> <parameter1> <parameter2>
+```
 
-- All are sent as string.
-- Delimiter is a space
-- Need a new line at the end
+* All commands are delimited by newlines (`\n`, hex 0x0A)
+* Parameters delimited by a single space
+* Commands must be terminated by a newline at the end
 
 ## Content
 
